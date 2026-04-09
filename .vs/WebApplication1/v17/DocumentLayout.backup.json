@@ -1,0 +1,232 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|c:\\users\\lenovo\\source\\repos\\webapplication1\\webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|c:\\users\\lenovo\\source\\repos\\webapplication1\\webapplication1\\controllers\\empoyeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\empoyeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|c:\\users\\lenovo\\source\\repos\\webapplication1\\webapplication1\\webapplication1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\webapplication1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|c:\\users\\lenovo\\source\\repos\\webapplication1\\webapplication1\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|c:\\users\\lenovo\\source\\repos\\webapplication1\\webapplication1\\models\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|c:\\users\\lenovo\\source\\repos\\webapplication1\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|c:\\users\\lenovo\\source\\repos\\webapplication1\\webapplication1\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|c:\\users\\lenovo\\source\\repos\\webapplication1\\webapplication1\\models\\updateempdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\updateempdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|c:\\users\\lenovo\\source\\repos\\webapplication1\\webapplication1\\models\\addempdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\addempdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|c:\\users\\lenovo\\source\\repos\\webapplication1\\webapplication1\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|c:\\users\\lenovo\\source\\repos\\webapplication1\\webapplication1\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|c:\\users\\lenovo\\source\\repos\\webapplication1\\webapplication1\\migrations\\20241214172041_initial migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\migrations\\20241214172041_initial migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|c:\\users\\lenovo\\source\\repos\\webapplication1\\webapplication1\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E900A5A8-80EF-4F54-BA6B-018396C16046}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WebApplication1.csproj",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+              "RelativeDocumentMoniker": "WebApplication1\\WebApplication1.csproj",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+              "RelativeToolTip": "WebApplication1\\WebApplication1.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-07T17:05:00.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmpoyeeController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\Controllers\\EmpoyeeController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\EmpoyeeController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\Controllers\\EmpoyeeController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\EmpoyeeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T17:34:03.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\appsettings.json",
+              "RelativeDocumentMoniker": "WebApplication1\\appsettings.json",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\appsettings.json",
+              "RelativeToolTip": "WebApplication1\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-14T17:05:36.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "WebApplication1\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T17:01:56.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\Program.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\Program.cs",
+              "RelativeToolTip": "WebApplication1\\Program.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T17:14:00.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "WebApplication1\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\Properties\\launchSettings.json",
+              "RelativeToolTip": "WebApplication1\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-22T08:33:10.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UpdateEmpDto.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\Models\\UpdateEmpDto.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\UpdateEmpDto.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\Models\\UpdateEmpDto.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\UpdateEmpDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T17:46:00.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\Models\\Entities\\Employee.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\Entities\\Employee.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\Models\\Entities\\Employee.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\Entities\\Employee.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T16:56:15.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddEmpDto.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\Models\\AddEmpDto.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\AddEmpDto.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\Models\\AddEmpDto.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\AddEmpDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T17:45:24.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "WebApplication1\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T17:21:07.766Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\WeatherForecast.cs",
+              "RelativeToolTip": "WebApplication1\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T15:38:10.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20241214172041_initial migration.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\Migrations\\20241214172041_initial migration.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Migrations\\20241214172041_initial migration.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\Migrations\\20241214172041_initial migration.cs",
+              "RelativeToolTip": "WebApplication1\\Migrations\\20241214172041_initial migration.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABUAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T17:20:42.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\WebApplication1\\WebApplication1\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T16:41:15.659Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
