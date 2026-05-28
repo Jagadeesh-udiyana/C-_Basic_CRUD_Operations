@@ -1,0 +1,187 @@
+CREATE PROCEDURE USP_IOU_Employee              
+(  
+    @guidEMPGUID             UNIQUEIDENTIFIER = NULL,  
+    @varEMPName              NVARCHAR(200) = NULL,  
+    @guidDepartmentID        UNIQUEIDENTIFIER = NULL,  
+    @varMobileNo             VARCHAR(20) = NULL,  
+    @varEmailID              NVARCHAR(200) = NULL,  
+    @dtmJoinDate             DATETIME = NULL,  
+    @decSalary               DECIMAL(18,2) = NULL,  
+    @tintStatus              TINYINT = NULL,  
+    @guidCreatedBy           UNIQUEIDENTIFIER = NULL,  
+  
+    @xmlEmployeeEducation    XML = NULL,  
+  
+    @chnOutputParameter      NVARCHAR(MAX) OUTPUT  
+)  
+AS  
+BEGIN  
+  
+BEGIN TRY  
+  
+BEGIN TRANSACTION;  
+  
+DECLARE @DateNow DATETIME = GETDATE();  
+  
+------------------------------------------------------------  
+-- XML TO TEMP TABLE  
+------------------------------------------------------------  
+  
+IF @xmlEmployeeEducation IS NOT NULL  
+BEGIN  
+  
+    SELECT  
+        T.EmployeeEducation.value('./@EDU_GUID', 'UNIQUEIDENTIFIER') AS EDU_GUID,  
+        CASE WHEN T.EmployeeEducation.value('./@Qualification', 'NVARCHAR(200)') = '' THEN NULL ELSE T.EmployeeEducation.value('./@Qualification', 'NVARCHAR(200)') END AS Qualification,  
+        CASE WHEN T.EmployeeEducation.value('./@InstitutionName', 'NVARCHAR(300)') = '' THEN NULL ELSE T.EmployeeEducation.value('./@InstitutionName', 'NVARCHAR(300)') END AS InstitutionName,  
+        CASE WHEN T.EmployeeEducation.value('./@YearOfPassing', 'VARCHAR(10)') = '' THEN NULL ELSE T.EmployeeEducation.value('./@YearOfPassing', 'INT') END AS YearOfPassing,  
+        CASE WHEN T.EmployeeEducation.value('./@Percentage', 'VARCHAR(20)') = '' THEN NULL ELSE T.EmployeeEducation.value('./@Percentage', 'DECIMAL(5,2)') END AS Percentage,  
+        CASE WHEN T.EmployeeEducation.value('./@Remarks', 'NVARCHAR(500)') = '' THEN NULL ELSE T.EmployeeEducation.value('./@Remarks', 'NVARCHAR(500)') END AS Remarks,  
+        1 AS Status  
+    INTO #XMLEmployeeEducation  
+    FROM @xmlEmployeeEducation.nodes('/Table/Rows') AS T(EmployeeEducation);  
+END  
+  
+------------------------------------------------------------  
+-- INSERT  
+------------------------------------------------------------  
+  
+IF NOT EXISTS (SELECT * FROM Employee_Master WITH(NOLOCK) WHERE EMPGUID = @guidEMPGUID)  
+BEGIN  
+    --------------------------------------------------------  
+    -- DUPLICATE CHECK  
+    --------------------------------------------------------  
+    IF NOT EXISTS (SELECT * FROM Employee_Master WITH(NOLOCK) WHERE EMPName = @varEMPName)  
+    BEGIN  
+        ----------------------------------------------------  
+        -- INSERT MASTER  
+        ----------------------------------------------------  
+        INSERT INTO Employee_Master (EMPGUID, EMPName, DepartmentID, MobileNo, EmailID, JoinDate, Salary, Status, CreatedOn, CreatedBy)  
+        VALUES (@guidEMPGUID, @varEMPName, @guidDepartmentID, @varMobileNo, @varEmailID, @dtmJoinDate, @decSalary, @tintStatus, @DateNow, @guidCreatedBy);  
+        ----------------------------------------------------  
+        -- INSERT CHILD  
+        ----------------------------------------------------  
+        IF @xmlEmployeeEducation IS NOT NULL  
+        BEGIN  
+            INSERT INTO Employee_Education (EDU_GUID, EMPGUID, Qualification, InstitutionName, YearOfPassing, Percentage, Remarks, Status, CreatedOn, CreatedBy)  
+            SELECT EDU_GUID, @guidEMPGUID, Qualification, InstitutionName, YearOfPassing, Percentage, Remarks, Status, @DateNow, @guidCreatedBy FROM #XMLEmployeeEducation;  
+        END  
+        SET @chnOutputParameter = 'Inserted';  
+    END  
+  
+    ELSE  
+    BEGIN  
+  
+        SET @chnOutputParameter = 'Exists';  
+  
+    END  
+  
+END  
+  
+------------------------------------------------------------  
+-- UPDATE  
+------------------------------------------------------------  
+  
+ELSE  
+  
+BEGIN  
+  
+    --------------------------------------------------------  
+    -- DUPLICATE CHECK  
+    --------------------------------------------------------  
+  
+    IF NOT EXISTS (SELECT * FROM Employee_Master WITH(NOLOCK) WHERE EMPName = @varEMPName AND EMPGUID <> @guidEMPGUID)  
+  
+    BEGIN  
+  
+        ----------------------------------------------------  
+        -- UPDATE MASTER  
+        ----------------------------------------------------  
+  
+        UPDATE Employee_Master  
+        SET  
+  
+            EMPName       = @varEMPName,  
+            DepartmentID  = @guidDepartmentID,  
+            MobileNo      = @varMobileNo,  
+            EmailID       = @varEmailID,  
+            JoinDate      = @dtmJoinDate,  
+            Salary        = @decSalary,  
+            Status        = @tintStatus,  
+            ModifiedOn    = @DateNow,  
+            ModifiedBy    = @guidCreatedBy  
+  
+        WHERE EMPGUID = @guidEMPGUID;  
+  
+        ----------------------------------------------------  
+        -- UPDATE CHILD  
+        ----------------------------------------------------  
+  
+        IF @xmlEmployeeEducation IS NOT NULL  
+        BEGIN  
+  
+            DELETE FROM Employee_Education  
+            WHERE EMPGUID =  @guidEMPGUID;  
+  
+            INSERT INTO Employee_Education  
+            (  
+                EDU_GUID,  
+                EMPGUID,  
+                Qualification,  
+                InstitutionName,  
+                YearOfPassing,  
+                Percentage,  
+                Remarks,  
+                Status,  
+                CreatedOn,  
+                CreatedBy  
+            )  
+  
+            SELECT  
+                EDU_GUID,  
+                @guidEMPGUID,  
+                Qualification,  
+                InstitutionName,  
+                YearOfPassing,  
+                Percentage,  
+                Remarks,  
+                Status,  
+                @DateNow,  
+                @guidCreatedBy  
+  
+            FROM #XMLEmployeeEducation;  
+  
+        END  
+  
+        SET @chnOutputParameter = 'Updated';  
+  
+    END  
+  
+    ELSE  
+    BEGIN  
+  
+        SET @chnOutputParameter = 'Exists';  
+  
+    END  
+  
+END  
+  
+------------------------------------------------------------  
+-- COMMIT  
+------------------------------------------------------------  
+  
+COMMIT;  
+  
+END TRY  
+  
+BEGIN CATCH  
+  
+    IF @@TRANCOUNT > 0  
+        ROLLBACK;  
+  
+    SET @chnOutputParameter =  
+    'DBERROR - ' + ERROR_MESSAGE();  
+  
+END CATCH  
+  
+END

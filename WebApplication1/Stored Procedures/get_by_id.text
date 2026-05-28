@@ -1,0 +1,20 @@
+CREATE Procedure USP_SEL_Employee          
+@guidEMPGUID  UniqueIdentifier = NULL          
+AS          
+Begin            -- exec USP_SEL_Employee @guidEMPGUID = '6371B97A-AD5F-47A6-934C-EB6EB816AB06'      
+        
+ SELECT EM.EMPGUID, EM.EMPName, EM.DepartmentID, EM.MobileNo , EM.EmailID, EM.JoinDate, EM.Salary, EM.Status         
+ FROM Employee_Master EM WITH (NOLOCK)            
+ /* Left join Org_workarea OW with(nolock) on(WP.WAGUID = OW.WAIDGUID )  
+ LEFT JOIN Employee_Education EE WITH (NOLOCK) ON (WP.EMPGUID = EE.EMPGUID)  */           
+ WHERE EM.EMPGUID = @guidEMPGUID          
+          
+          
+ SELECT EE.EDU_GUID, EE.EMPGUID, EE.Qualification, EE.InstitutionName, EE.YearOfPassing, EE.Percentage, EE.Remarks         
+ FROM Employee_Education EE WITH (NOLOCK)           
+ /* left join Workout_Exercises WE with(nolock) on(WE.ExerGUID = WPE.ExerciseID )        
+ left join Admin_crmcodes AC with(nolock) on(AC.Value = WPE.DayOfWeek and CodeType = 'DayOfWeek' )     */    
+ WHERE EE.EMPGUID = @guidEMPGUID      
+ /* Order by AC.Value Asc */   
+           
+End 
