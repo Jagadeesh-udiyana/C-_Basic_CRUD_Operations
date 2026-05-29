@@ -271,6 +271,77 @@ namespace WebApplication1.Controllers
 
         }
 
+        [HttpDelete]
+        [Route("DeleteEmployee")]
+
+        public ModelResponse DeleteEmployee(string EMPGUID)
+        {
+
+            ModelResponse objResponse =new ModelResponse();
+
+            string connectionString = _configuration.GetConnectionString("DefaultConnection");
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+
+                SqlCommand cmd =  new SqlCommand("USP_DEL_Employee", con);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                //-------------------------------------------------
+                // PARAMETER
+                //-------------------------------------------------
+
+                cmd.Parameters.AddWithValue( "@guidEMPGUID", EMPGUID);
+
+                //-------------------------------------------------
+                // OPEN CONNECTION
+                //-------------------------------------------------
+
+                con.Open();
+
+                //-------------------------------------------------
+                // EXECUTE
+                //-------------------------------------------------
+
+                int result = cmd.ExecuteNonQuery();
+
+                //-------------------------------------------------
+                // RESPONSE
+                //-------------------------------------------------
+
+                if (result > 0)
+                {
+
+                    objResponse =
+                        new ModelResponse(
+                            "111",
+                            "Success",
+                            "Employee",
+                            "Deleted Successfully",
+                            ""
+                        );
+
+                }
+                else
+                {
+
+                    objResponse =
+                        new ModelResponse(
+                            "222",
+                            "Failed",
+                            "Employee",
+                            "No Records Deleted",
+                            ""
+                        );
+
+                }
+
+            }
+
+            return objResponse;
+
+        }
 
 
         [HttpPost]

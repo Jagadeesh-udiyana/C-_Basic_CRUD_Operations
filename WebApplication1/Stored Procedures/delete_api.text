@@ -1,0 +1,14 @@
+alter Procedure USP_DEL_Employee          
+@guidEMPGUID  UniqueIdentifier = NULL          
+AS          
+Begin            -- exec USP_DEL_Employee @guidEMPGUID = '6371b97a-ad5f-47a6-143c-eb6eb816ab01'      
+     
+          
+ Delete FROM Employee_Education        
+ WHERE EMPGUID = @guidEMPGUID      
+           
+                   
+ Delete FROM Employee_Master          
+ WHERE EMPGUID = @guidEMPGUID     
+
+End 

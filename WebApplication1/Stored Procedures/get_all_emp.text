@@ -8,4 +8,4 @@ Begin            -- exec USP_SEL_ALL_Employees
  SELECT EE.EDU_GUID, EE.EMPGUID, EE.Qualification, EE.InstitutionName, EE.YearOfPassing, EE.Percentage, EE.Remarks           
  FROM Employee_Education EE WITH (NOLOCK)             
              
-End 
+End  
