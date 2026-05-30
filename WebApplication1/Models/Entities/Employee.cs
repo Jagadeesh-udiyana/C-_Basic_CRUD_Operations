@@ -1,5 +1,20 @@
 ﻿namespace WebApplication1.Models.Entities
 {
+    public class FileUploadResponse
+    {
+        public Guid FileGUID { get; set; }
+
+        public string FileName { get; set; }
+
+        public string RelativePath { get; set; }
+
+        public string FileType { get; set; }
+
+        public long FileSizeInBytes { get; set; }
+
+        public DateTime CreatedOn { get; set; }
+    }
+
     //---------------------------------------------------------
     // EXISTING CLASS - KEEP AS IT IS
     //---------------------------------------------------------
