@@ -3,6 +3,7 @@ using Microsoft.Data.SqlClient;
 using System.Data;
 using System.Xml;
 using WebApplication1.Models.Entities;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApplication1.Controllers
 {
@@ -279,6 +280,23 @@ namespace WebApplication1.Controllers
 
             ModelResponse objResponse =new ModelResponse();
 
+            //-------------------------------------------------
+            // JWT CLAIMS
+            //-------------------------------------------------
+
+            string userGuid = User.FindFirst("UserGUID")?.Value;
+            string userName = User.FindFirst("UserName")?.Value;
+            string roleName = User.FindFirst("RoleName")?.Value;
+
+            //-------------------------------------------------
+            // ROLE CHECK
+            //-------------------------------------------------
+
+            if (roleName != "Admin")
+            {
+                return new ModelResponse("401","Unauthorized","Employee", "Only Admin can delete employees", "");
+            }
+
             string connectionString = _configuration.GetConnectionString("DefaultConnection");
 
             using (SqlConnection con = new SqlConnection(connectionString))
@@ -313,27 +331,13 @@ namespace WebApplication1.Controllers
                 if (result > 0)
                 {
 
-                    objResponse =
-                        new ModelResponse(
-                            "111",
-                            "Success",
-                            "Employee",
-                            "Deleted Successfully",
-                            ""
-                        );
+                    objResponse = new ModelResponse("111", "Success", "Employee", "Deleted Successfully","");
 
                 }
                 else
                 {
 
-                    objResponse =
-                        new ModelResponse(
-                            "222",
-                            "Failed",
-                            "Employee",
-                            "No Records Deleted",
-                            ""
-                        );
+                    objResponse = new ModelResponse("222", "Failed", "Employee", "No Records Deleted", "");
 
                 }
 
@@ -461,13 +465,11 @@ namespace WebApplication1.Controllers
                 }
                 else if (message == "Updated")
                 {
-                    objResult.Response =
-                        new ModelResponse("111","Success", "Employee", "Updated Successfully", "");
+                    objResult.Response = new ModelResponse("111","Success", "Employee", "Updated Successfully", "");
                 }
                 else if (message == "Exists")
                 {
-                    objResult.Response =
-                        new ModelResponse("222", "Exists", "Employee", "Employee Already Exists", "");
+                    objResult.Response = new ModelResponse("222", "Exists", "Employee", "Employee Already Exists", "");
                 }
                 else
                 {
